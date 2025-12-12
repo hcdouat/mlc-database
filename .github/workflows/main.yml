@@ -1,9 +1,5 @@
 name: db-migrate
-
-on:
-  push:
-    branches: [ "main" ]
-  workflow_dispatch: {}
+on: push
 
 jobs:
   migrate:
@@ -12,9 +8,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: red-gate/setup-flyway@v1
-
-      - name: Install PostgreSQL plugin
-        run: flyway plugin install -plugin=postgresql
 
       - name: Flyway migrate (includes validate)
         run: |
