@@ -26,6 +26,6 @@ detectRenames = "identical-only"
 [redgateCompare.postgresql.options.ignores]
 ignoreNewlinesInTextObjects = "off"
 
-[environments.target1]
+[environments.mlc-database]
 url = "jdbc:postgresql://psql-mlc-database.postgres.database.azure.com:5432/postgres"
 schemas = [ "public" ]
